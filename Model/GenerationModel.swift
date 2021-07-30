@@ -6,7 +6,7 @@
 //
 import UIKit
 
-enum generations {
+enum generationsEnum {
     case generationZ
     case generationY
     case generationX
@@ -16,7 +16,7 @@ enum generations {
 
 
 class Generation {
-    let generation: generations
+    let generation: generationsEnum
     
     let title: String
     let description: String
@@ -24,7 +24,7 @@ class Generation {
     let range: RangeModel
     var certain: Int
     
-    init(generation: generations,title: String, description: String, color: UIColor, range: RangeModel) {
+    init(generation: generationsEnum,title: String, description: String, color: UIColor, range: RangeModel) {
         self.generation = generation
         self.title = title
         self.description = description
@@ -32,4 +32,5 @@ class Generation {
         self.range = range
         certain = 100
     }
+    
 }

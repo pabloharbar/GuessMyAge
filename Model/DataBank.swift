@@ -22,12 +22,62 @@ class DataBank {
     var questionData = [
         Question(question: "Já viveu algum período de ditadura militar?", options: [
             Option(text: "Sim", range: RangeModel(min: 35, max: 100), certain: 100, generationsIncluded: [.silentGeneration,.babyBoomer,.generationX, .generationY]),
-            Option(text: "Não", range: RangeModel(min: 0, max: 36), certain: 100, generationsIncluded: [.generationZ,.generationY])
+            Option(text: "Não", range: RangeModel(min: 12, max: 36), certain: 100, generationsIncluded: [.generationZ,.generationY])
         ], id: 1),
-        Question(question: "Já viveu algum período de ditadura militar2?", options: [
-            Option(text: "Sim2", range: RangeModel(min: 35, max: 100), certain: 100, generationsIncluded: [.silentGeneration,.babyBoomer,.generationX, .generationY]),
-            Option(text: "Não2", range: RangeModel(min: 0, max: 36), certain: 100, generationsIncluded: [.generationZ,.generationY])
+        Question(question: "O que você acha da série Harry Potter?", options: [
+            Option(text: "Nunca ouvi falar", range: RangeModel(min: 45, max: 100), certain: 40, generationsIncluded: [.silentGeneration,.babyBoomer,.generationX]),
+            Option(text: "Gosto da franquia", range: RangeModel(min: 12, max: 55), certain: 10, generationsIncluded: [.generationZ,.generationY,.generationX]),
+            Option(text: "Não gosto", range: RangeModel(min: 20, max: 100), certain: 100, generationsIncluded: [.generationX,.generationY,.babyBoomer,.silentGeneration])
         ], id: 2),
+        Question(question: "Você escuta K-Pop ou conhece?", options: [
+            Option(text: "Amooo!", range: RangeModel(min: 12, max: 25), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Prefiro outros estilos", range: RangeModel(min: 12, max: 100), certain: 10, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Nunca ouvi falar", range: RangeModel(min: 30, max: 100), certain: 100, generationsIncluded: [.generationX,.generationY,.babyBoomer,.silentGeneration])
+        ], id: 3),
+        Question(question: "Você usa TikTok?", options: [
+            Option(text: "Sim", range: RangeModel(min: 12, max: 25), certain: 80, generationsIncluded: [.generationZ,.generationX]),
+            Option(text: "Não", range: RangeModel(min: 16, max: 100), certain: 80, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer,.silentGeneration])
+        ], id: 4),
+        Question(question: "Que horas você costuma dormir?", options: [
+            Option(text: "Antes das 20:00", range: RangeModel(min: 60, max: 100), certain: 70, generationsIncluded: [.babyBoomer,.silentGeneration]),
+            Option(text: "De madrugada", range: RangeModel(min: 16, max: 30), certain: 50, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Nem cedo nem tarde", range: RangeModel(min: 16, max: 60), certain: 60, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 5),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 6),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 7),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 7),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 7),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 7),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 7),
+        Question(question: "Consome bebidas alcoólicas?", options: [
+            Option(text: "Pau tora", range: RangeModel(min: 15, max: 28), certain: 80, generationsIncluded: [.generationZ,.generationY]),
+            Option(text: "Já passei dessa idade", range: RangeModel(min: 35, max: 80), certain: 60, generationsIncluded: [.generationY,.generationX,.babyBoomer,.silentGeneration]),
+            Option(text: "Eventualmente", range: RangeModel(min: 16, max: 80), certain: 20, generationsIncluded: [.generationZ,.generationY,.generationX,.babyBoomer]),
+        ], id: 7),
     ]
     
     func getQuestions() -> [Question] {

@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "babyClear@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "babyClear@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

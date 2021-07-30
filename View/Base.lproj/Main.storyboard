@@ -134,24 +134,24 @@
                                 <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JCC-sL-E3j">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JCC-sL-E3j">
                                 <rect key="frame" x="60" y="423" width="294" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ejb-ew-vps"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="WW5-Gn-PAy" imageView="bSh-OA-eB5" style="IBUITableViewCellStyleDefault" id="Dnh-or-aR0">
-                                        <rect key="frame" x="0.0" y="28" width="294" height="66.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="WW5-Gn-PAy" imageView="bSh-OA-eB5" rowHeight="64" style="IBUITableViewCellStyleDefault" id="Dnh-or-aR0">
+                                        <rect key="frame" x="0.0" y="28" width="294" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dnh-or-aR0" id="Ch7-uQ-DQs">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="66.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WW5-Gn-PAy">
-                                                    <rect key="frame" x="16" y="0.0" width="262" height="66.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="262" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" name="Orange"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -171,16 +171,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAv-DL-FTZ">
                                 <rect key="frame" x="39" y="206" width="336" height="140"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="babyClear" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-PT-wHj">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="babyClear" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-PT-wHj">
                                         <rect key="frame" x="0.0" y="76" width="66" height="64"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="adultClear" translatesAutoresizingMaskIntoConstraints="NO" id="5Pf-Rq-pgn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="adultClear" translatesAutoresizingMaskIntoConstraints="NO" id="5Pf-Rq-pgn">
                                         <rect key="frame" x="158" y="0.0" width="80" height="140"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="elderClear" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-BC-Uu1">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="elderClear" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-BC-Uu1">
                                         <rect key="frame" x="259" y="22" width="77" height="118"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="teenClear" translatesAutoresizingMaskIntoConstraints="NO" id="2QV-gE-bZA">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="teenClear" translatesAutoresizingMaskIntoConstraints="NO" id="2QV-gE-bZA">
                                         <rect key="frame" x="81" y="30" width="56" height="110"/>
                                     </imageView>
                                 </subviews>
@@ -236,7 +236,7 @@
         <!--End View Controller-->
         <scene sceneID="BjW-9Q-zfL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="vco-m0-K0e" customClass="EndViewController" customModule="GuessMyAge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="endViewController" modalPresentationStyle="fullScreen" id="vco-m0-K0e" customClass="EndViewController" customModule="GuessMyAge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IWz-8M-Hll"/>
                         <viewControllerLayoutGuide type="bottom" id="Loq-Ew-S1L"/>
@@ -270,23 +270,6 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="Bn7-0L-kEb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQh-TJ-nmt">
-                                <rect key="frame" x="34" y="415" width="171.5" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Acertou!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtX-pp-hfG">
-                                <rect key="frame" x="207.5" y="415" width="172.5" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Errou...">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hay-dg-hTp" kind="show" id="36X-NF-HlN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geração X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GC-S9-Odg">
                                 <rect key="frame" x="167" y="319" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -299,12 +282,35 @@
                                 <color key="textColor" name="teenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A geração Y é composta por pessoas nascidas entre 2000 e 1980, são a maior parte das pessoas que compõe a sociedade hoje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfF-Zg-YhR">
+                                <rect key="frame" x="44" y="391" width="326" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQh-TJ-nmt">
+                                <rect key="frame" x="34" y="495" width="171.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Acertou!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtX-pp-hfG">
+                                <rect key="frame" x="207.5" y="495" width="172.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Errou...">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hay-dg-hTp" kind="show" id="36X-NF-HlN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="34h-En-zac" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="0IO-l7-53j"/>
+                            <constraint firstItem="gfF-Zg-YhR" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="15c-rM-Iyk"/>
                             <constraint firstItem="Loq-Ew-S1L" firstAttribute="top" secondItem="34h-En-zac" secondAttribute="bottom" constant="80" id="1C1-Xw-UPx"/>
-                            <constraint firstItem="PtX-pp-hfG" firstAttribute="top" secondItem="xOE-jf-ZJI" secondAttribute="bottom" constant="42" id="1Ec-XL-FA6"/>
                             <constraint firstItem="PtX-pp-hfG" firstAttribute="width" secondItem="mQh-TJ-nmt" secondAttribute="width" constant="1" id="2VJ-up-zjU"/>
                             <constraint firstItem="FHa-7q-erb" firstAttribute="top" secondItem="IWz-8M-Hll" secondAttribute="bottom" constant="90" id="53B-ux-Hmn"/>
                             <constraint firstItem="Aek-dP-4b6" firstAttribute="top" secondItem="FHa-7q-erb" secondAttribute="bottom" constant="12" id="5es-2p-Flq"/>
@@ -312,20 +318,24 @@
                             <constraint firstItem="xOE-jf-ZJI" firstAttribute="top" secondItem="7GC-S9-Odg" secondAttribute="bottom" constant="12" id="8G5-GP-RgU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PtX-pp-hfG" secondAttribute="trailing" constant="14" id="B0Q-Ao-qwU"/>
                             <constraint firstItem="Aek-dP-4b6" firstAttribute="leading" secondItem="OQA-IN-BL1" secondAttribute="leadingMargin" constant="40" id="Gd8-Ch-8gA"/>
+                            <constraint firstItem="gfF-Zg-YhR" firstAttribute="top" secondItem="xOE-jf-ZJI" secondAttribute="bottom" constant="18" id="KK6-lT-Iew"/>
                             <constraint firstItem="rI0-cl-H38" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="McR-eh-uGg"/>
-                            <constraint firstItem="mQh-TJ-nmt" firstAttribute="top" secondItem="xOE-jf-ZJI" secondAttribute="bottom" constant="42" id="TvG-Ji-oPv"/>
                             <constraint firstItem="7GC-S9-Odg" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="UJf-Iz-TLh"/>
                             <constraint firstItem="FHa-7q-erb" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="aFY-wX-uT1"/>
+                            <constraint firstItem="PtX-pp-hfG" firstAttribute="top" secondItem="gfF-Zg-YhR" secondAttribute="bottom" constant="18" id="dbR-fT-ln2"/>
+                            <constraint firstItem="mQh-TJ-nmt" firstAttribute="top" secondItem="gfF-Zg-YhR" secondAttribute="bottom" constant="18" id="e36-pr-9LZ"/>
                             <constraint firstItem="xOE-jf-ZJI" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="hmX-aX-GtD"/>
                             <constraint firstItem="Aek-dP-4b6" firstAttribute="centerX" secondItem="OQA-IN-BL1" secondAttribute="centerX" id="nHK-cy-dWX"/>
                             <constraint firstItem="mQh-TJ-nmt" firstAttribute="leading" secondItem="OQA-IN-BL1" secondAttribute="leadingMargin" constant="14" id="pSw-eF-4kK"/>
                             <constraint firstItem="rI0-cl-H38" firstAttribute="centerY" secondItem="OQA-IN-BL1" secondAttribute="centerY" id="vA8-IT-gWw"/>
                             <constraint firstItem="PtX-pp-hfG" firstAttribute="leading" secondItem="mQh-TJ-nmt" secondAttribute="trailing" constant="2" id="vPk-c6-i1l"/>
+                            <constraint firstItem="gfF-Zg-YhR" firstAttribute="leading" secondItem="OQA-IN-BL1" secondAttribute="leadingMargin" constant="24" id="vvE-BK-tpg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ageImage" destination="Aek-dP-4b6" id="AHB-2N-ChR"/>
                         <outlet property="ageLabel" destination="xOE-jf-ZJI" id="0Jp-FL-Beg"/>
+                        <outlet property="generationDescriptionLabel" destination="gfF-Zg-YhR" id="PIN-nK-9zk"/>
                         <outlet property="generationLabel" destination="7GC-S9-Odg" id="x19-TM-YFE"/>
                         <outlet property="playAgainButton" destination="34h-En-zac" id="GH6-au-gz2"/>
                         <outlet property="rightButton" destination="mQh-TJ-nmt" id="Mji-ya-vxQ"/>
@@ -391,14 +401,14 @@
     <resources>
         <image name="BackgroundHome" width="414" height="896"/>
         <image name="BackgroundResult" width="414" height="896"/>
-        <image name="adultClear" width="80" height="140"/>
+        <image name="adultClear" width="79.5" height="139.5"/>
         <image name="adultResult" width="335" height="140"/>
-        <image name="babyClear" width="66" height="64"/>
-        <image name="elderClear" width="77" height="118"/>
+        <image name="babyClear" width="65.5" height="63.5"/>
+        <image name="elderClear" width="76.5" height="118"/>
         <image name="logo" width="298" height="125"/>
-        <image name="teenClear" width="56" height="110"/>
+        <image name="teenClear" width="55" height="109.5"/>
         <namedColor name="DarkGreen">
-            <color red="0.21176470588235294" green="0.50196078431372548" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.21199999749660492" green="0.50199997425079346" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gray">
             <color red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

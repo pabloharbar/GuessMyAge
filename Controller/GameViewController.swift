@@ -46,33 +46,24 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
             
-//       // Fetch Fruit
-//       let fruit = fruits[indexPath.row]
-//
-//       // Configure Cell
         cell.textLabel?.text = currentQuestion.options[indexPath.row].text
         let selectedView = UIView()
-        selectedView.backgroundColor = UIColor(named: "Orange")
+        selectedView.backgroundColor = UIColor(named: "Orange")?.withAlphaComponent(0.5)
         cell.selectedBackgroundView = selectedView
        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        questions.removeAll { question in
-            return question.id == currentQuestion.id
-        }
-        
-        if questions.count > 0 {
-            currentQuestion = questions.randomElement()!
-        } else {
-            //Finish game
-        }
-        optionsView.allowsSelection = false
         showResultImage(generations: currentQuestion.options[indexPath.row].generationsIncluded)
+        
+        optionsView.allowsSelection = false
         
         let cell = optionsView.cellForRow(at: indexPath)
         cell?.textLabel?.textColor = .white
         
+        currentGuess.updateGuessCertain(option: currentQuestion.options[indexPath.row])
+        
+//        currentGuess.updateGenerationCertain(option: currentQuestion.options[indexPath.row])
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.updateQuestion()
@@ -105,11 +96,19 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func updateQuestion() {
+        questions.removeAll { question in
+            return question.id == currentQuestion.id
+        }
+        if questions.count > 0 {
+            currentQuestion = questions.randomElement()!
+        } else {
+            stopCriteria()
+        }
         questionLabel.text = currentQuestion.question
         optionsView.reloadData()
     }
     
-    func showResultImage(generations: [generations]) {
+    func showResultImage(generations: [generationsEnum]) {
         for i in generations {
             switch i {
             case .generationZ:
@@ -124,7 +123,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func resetImage(generations: [generations]) {
+    func resetImage(generations: [generationsEnum]) {
         for i in generations {
             switch i {
             case .generationZ:
@@ -139,4 +138,39 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func stopCriteria() {
+        if questions.count <= 1 {
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "endViewController") as! EndViewController
+            self.show(vc, sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let vc = segue.destination as? EndViewController {
+            let result = self.currentGuess.collectResult()
+            vc.ageResult = "\(result[0]) anos"
+            switch result[1] {
+            case 0:
+                vc.generationTitle = DataBank.shared.generationData[0].title
+                vc.generationDescription = DataBank.shared.generationData[0].description
+            case 1:
+                vc.generationTitle = DataBank.shared.generationData[1].title
+                vc.generationDescription = DataBank.shared.generationData[1].description
+            case 2:
+                vc.generationTitle = DataBank.shared.generationData[2].title
+                vc.generationDescription = DataBank.shared.generationData[2].description
+            case 3:
+                vc.generationTitle = DataBank.shared.generationData[3].title
+                vc.generationDescription = DataBank.shared.generationData[3].description
+            case 4:
+                vc.generationTitle = DataBank.shared.generationData[4].title
+                vc.generationDescription = DataBank.shared.generationData[4].description
+                
+            default:
+                break
+            }
+           
+        }
+    }
 }
