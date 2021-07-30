@@ -25,6 +25,8 @@ class EndViewController: UIViewController {
     
     @IBOutlet weak var wrongButton: UIButton!
     
+    var gameViewController: GameViewController!
+    
     var generationTitle = ""
     
     var generationDescription = ""
@@ -57,8 +59,8 @@ class EndViewController: UIViewController {
     
     func loadData(generationTitle: String, generationDescription: String, ageResult: String) {
         self.generationLabel.text = generationTitle
-        self.generationDescription = generationDescription
-        self.ageResult = ageResult
+        self.generationDescriptionLabel.text = generationDescription
+        self.ageLabel.text = ageResult
     }
     
 }

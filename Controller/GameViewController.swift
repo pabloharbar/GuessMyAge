@@ -68,7 +68,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.updateQuestion()
             self.optionsView.reloadData()
-            self.resetImage(generations: self.currentQuestion.options[indexPath.row].generationsIncluded)
+            self.resetImage()
             self.optionsView.allowsSelection = true
             cell?.textLabel?.textColor = UIColor(named: "Orange")
         }
@@ -92,7 +92,12 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         progressLabel.text = "Criando suposições"
         progressLabel.font = .rounded(ofSize: 20, weight: .regular)
         optionsView.isScrollEnabled = false
-        updateQuestion()
+        initQuestion()
+    }
+    
+    func initQuestion() {
+        questionLabel.text = currentQuestion.question
+        optionsView.reloadData()
     }
     
     func updateQuestion() {
@@ -123,8 +128,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func resetImage(generations: [generationsEnum]) {
-        for i in generations {
+    func resetImage() {
+        for i in [generationsEnum.generationZ,.generationY,.generationX,.babyBoomer] {
             switch i {
             case .generationZ:
                 babyImage.image = UIImage(named: "babyClear")
@@ -141,6 +146,31 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func stopCriteria() {
         if questions.count <= 1 {
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "endViewController") as! EndViewController
+            vc.gameViewController = self
+            
+            let result = self.currentGuess.collectResult()
+
+            vc.ageResult = "\(result[0]) anos"
+            switch result[1] {
+            case 0:
+                vc.generationTitle = DataBank.shared.generationData[0].title
+                vc.generationDescription = DataBank.shared.generationData[0].description
+            case 1:
+                vc.generationTitle = DataBank.shared.generationData[1].title
+                vc.generationDescription = DataBank.shared.generationData[1].description
+            case 2:
+                vc.generationTitle = DataBank.shared.generationData[2].title
+                vc.generationDescription = DataBank.shared.generationData[2].description
+            case 3:
+                vc.generationTitle = DataBank.shared.generationData[3].title
+                vc.generationDescription = DataBank.shared.generationData[3].description
+            case 4:
+                vc.generationTitle = DataBank.shared.generationData[4].title
+                vc.generationDescription = DataBank.shared.generationData[4].description
+                
+            default:
+                break
+            }
             self.show(vc, sender: self)
         }
     }
@@ -149,6 +179,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         if let vc = segue.destination as? EndViewController {
             let result = self.currentGuess.collectResult()
+            print(result)
             vc.ageResult = "\(result[0]) anos"
             switch result[1] {
             case 0:

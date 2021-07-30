@@ -83,13 +83,21 @@ class Guess {
         }
         
         maxValue = self.ageCertain[searchRange[0] - 1]
-        var ageResult = searchRange[0] - 1
+        var possibleResults: [Int] = []
+        var ageResult = 0
         for i in searchRange {
-            if ageCertain[i - 1] > maxValue {
+            if ageCertain[i - 1] >= maxValue {
                 maxValue = ageCertain[i - 1]
-                ageResult = i
             }
         }
+        
+        for i in searchRange {
+            if ageCertain[i - 1] >= maxValue {
+                possibleResults.append(i)
+            }
+        }
+        
+        ageResult = possibleResults.randomElement()!
         
         return [ageResult,generationCase]
     }

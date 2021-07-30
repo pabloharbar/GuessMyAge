@@ -121,13 +121,6 @@
                                     <constraint firstItem="rJL-2l-1Fg" firstAttribute="top" secondItem="M7q-eR-A7T" secondAttribute="bottom" constant="15" id="tlJ-Z8-I0d"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GW-tA-0a7">
-                                <rect key="frame" x="184" y="812" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="vco-m0-K0e" kind="showDetail" id="Vhw-cj-0GZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-uS-7eK">
                                 <rect key="frame" x="60" y="370" width="294" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -202,10 +195,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JCC-sL-E3j" firstAttribute="top" secondItem="zRG-uS-7eK" secondAttribute="bottom" constant="24" id="2nH-dD-p6a"/>
-                            <constraint firstItem="fDt-bg-IJZ" firstAttribute="top" secondItem="5GW-tA-0a7" secondAttribute="bottom" constant="20" id="Bl3-5E-nWV"/>
                             <constraint firstItem="JCC-sL-E3j" firstAttribute="centerX" secondItem="RUg-nG-B7D" secondAttribute="centerX" id="CsG-js-S1b"/>
                             <constraint firstItem="aAv-DL-FTZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RUg-nG-B7D" secondAttribute="leading" constant="39" id="EE4-C8-FDY"/>
-                            <constraint firstItem="5GW-tA-0a7" firstAttribute="centerX" secondItem="RUg-nG-B7D" secondAttribute="centerX" id="Iyb-ub-FnP"/>
                             <constraint firstItem="zRG-uS-7eK" firstAttribute="leading" secondItem="RUg-nG-B7D" secondAttribute="leadingMargin" constant="40" id="OJm-2F-8i4"/>
                             <constraint firstItem="aAv-DL-FTZ" firstAttribute="centerX" secondItem="RUg-nG-B7D" secondAttribute="centerX" id="PZr-Fx-KZe"/>
                             <constraint firstAttribute="trailing" secondItem="ITI-es-riP" secondAttribute="trailing" id="VaV-au-Tfq"/>
